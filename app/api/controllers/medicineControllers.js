@@ -1,4 +1,4 @@
-const model = require('../models');
+const model = require('../../../models');
 
 module.exports = {
     list: async (req, res) => {

@@ -30,15 +30,15 @@
                             </tr>   
                         </thead>
                         <tbody>
-                            <% for (let i = 0; i < medList.length; i++) { %>
+                            <% for (let i = 0; i < medicines.length; i++) { %>
                                 <tr>
                                     <td><%= i+1 %></td>
-                                    <td><%= medList[i].medicine_name %></td>
-                                    <td><%= medList[i].qty %></td>
-                                    <td><%= medList[i].exp_year %></td>
+                                    <td><%= medicines[i].medicine_name %></td>
+                                    <td><%= medicines[i].qty %></td>
+                                    <td><%= medicines[i].exp_year %></td>
                                     <td>
-                                        <a href="/addMedicine/<%= medList[i].id %>/edit" class="btn btn-warning">Edit</a>
-                                        <a href="/medicine/<%= medList[i].id %>/delete" class="btn btn-danger">Delete</a>
+                                        <a href="/medicine/<%= medicines[i]._id %>/edit" class="btn btn-warning">Edit</a>
+                                        <a href="/medicine/<%= medicines[i]._id %>/delete" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             <% } %>
