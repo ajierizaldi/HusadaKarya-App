@@ -1,11 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const medicineControllers = require('./controllers/medicineControllers');
-// const patientControllers = require('./controllers/patientControllers');
+const patientControllers = require('./controllers/patientControllers');
 
+// medicine API
 router.get('/meds', medicineControllers.list);
 router.post('/addMed', medicineControllers.create);
-router.put('/update/:id', medicineControllers.update);
-router.delete('/delete/:id', medicineControllers.destroy);
+router.put('/updateMed/:id', medicineControllers.update);
+router.delete('/deleteMed/:id', medicineControllers.destroy);
+
+// Patient API
+router.get('/patients', patientControllers.list);
+router.post('/addPatient', patientControllers.create);
+router.put('/updatePatient/:id', patientControllers.update);
+router.delete('/deletePatient/:id', patientControllers.destroy);
 
 module.exports = router;
