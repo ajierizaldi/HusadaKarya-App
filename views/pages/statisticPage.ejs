@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+</head>
+<body>
+    <header>
+        <%- include('../partials/partials_navbar') %> 
+    </header>
+    
+    <main>
+        <!-- SideNav -->
+        <div class="row">
+            <%- include('../partials/partials_sidebar') %> 
+            <!-- End SideNav -->
+
+            <!-- Field -->
+            <div class="col-md-9 mb-3">
+                <h3>Statistics</h3>
+                <br>
+                <!-- grafik batang -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <canvas id="myChart2" width="400" height="400"></canvas>
+                    </div>
+            </div>
+          <!-- End Field -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/partials_footer')  %> 
+    <!-- End Footer -->
+
+    <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>

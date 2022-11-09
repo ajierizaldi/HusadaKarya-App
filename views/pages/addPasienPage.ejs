@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/partials_navbar') %> 
+    </header>
+    
+    <main>
+        <!-- SideNav -->
+        <div class="row">
+            <%- include('../partials/partials_sidebar') %> 
+            <!-- End SideNav -->
+
+            <!-- Field -->
+            <div class="col-md-9">
+                <div class="container mb-5 mt-5">
+                    <h3><b>TAMBAH PASIEN</b></h3>
+                    <form action="/patient/create">
+                        <div class="mb-3 mt-3">
+                            <label for="name" class="form-label">Nama:</label>
+                            <input type="nama" class="form-control" id="name" placeholder="Masukkan Nama" name="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="birthdate" class="form-label">Tanggal Lahir:</label>
+                            <input type="date" class="form-control" id="birthdate" placeholder="Tanggal Lahir" name="birthdate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Alamat:</label>
+                            <textarea name="text" id="address" rows="2" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="medicine-date" class="form-label">Tanggal Berobat:</label>
+                            <input type="date" class="form-control" id="medicine-date" placeholder="Tanggal Berobat" name="medicinedate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="anamnesa" class="form-label">Anamnesa:</label>
+                            <textarea name="text" id="anamnesa" rows="2" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="diagnosa" class="form-label">Diagnosa:</label>
+                            <textarea name="text" id="diagnosa" rows="2" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="terapi" class="form-label">Terapi:</label>
+                            <textarea name="text" id="terapi" rows="2" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+          <!-- End Field -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/partials_footer')  %> 
+    <!-- End Footer -->
+
+    <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+</head>
+<body>
+    <header>
+        <%- include('../partials/partials_navbar') %> 
+    </header>
+    
+    <main>
+        <!-- SideNav -->
+        <div class="row">
+            <%- include('../partials/partials_sidebar') %> 
+            <!-- End SideNav -->
+
+            <!-- Field -->
+            <div class="col-md-9 mb-3 mt-3">
+                <div class="container">
+                    <h3>Data Pasien</h3>
+                    <br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>Tanggal Lahir</th>
+                                <th>Tanggal Berobat</th>
+                                <th>Aksi</th>
+                            </tr>   
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Andi</td>
+                                <td>1999-01-01</td>
+                                <td>2020-01-01</td>
+                                <td>
+                                    <a href="/pasien/1" class="btn btn-primary">Detail</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <a href="/addPatient" class="btn btn-primary">Tambah</a>
+                </div>
+            </div>
+        </div>
+          <!-- End Field -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/partials_footer')  %> 
+    <!-- End Footer -->
+
+    <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>

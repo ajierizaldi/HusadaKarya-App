@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+    <link rel="stylesheet" href="css/loginStyles.css">
+</head>
+<body class="text-center">
+    <main class="form-signin w-100 m-auto">
+        <form>
+            <img class="mb-4" src="images/logo_1.png" alt="" width="200px">
+            <h1 class="h3 mb-3 fw-normal">Login</h1>
+        
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-ungu" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">© Copyright 2022 <b>Husada Karya</b></p>
+          </form>
+        </main>
+      <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>

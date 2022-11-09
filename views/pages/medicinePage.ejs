@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+</head>
+<body>
+    <header>
+        <%- include('../partials/partials_navbar') %> 
+    </header>
+    
+    <main>
+        <!-- SideNav -->
+        <div class="row">
+            <%- include('../partials/partials_sidebar') %> 
+            <!-- End SideNav -->
+
+            <!-- Field -->
+            <div class="col-md-9 mb-3">
+                <div class="container">
+                    <h3>Data Obat</h3>
+                    <br>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Obat</th>
+                                <th>Jumlah</th>
+                                <th>Tahun Kadaluwarsa</th>
+                                <th>Aksi</th>
+                            </tr>   
+                        </thead>
+                        <tbody>
+                            <% for (let i = 0; i < medList.length; i++) { %>
+                                <tr>
+                                    <td><%= i+1 %></td>
+                                    <td><%= medList[i].medicine_name %></td>
+                                    <td><%= medList[i].qty %></td>
+                                    <td><%= medList[i].exp_year %></td>
+                                    <td>
+                                        <a href="/addMedicine/<%= medList[i].id %>/edit" class="btn btn-warning">Edit</a>
+                                        <a href="/medicine/<%= medList[i].id %>/delete" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <a href="/addMedicine" class="btn btn-primary">Tambah</a>
+                </div>
+            </div>
+                
+        </div>
+          <!-- End Field -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/partials_footer')  %> 
+    <!-- End Footer -->
+
+    <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/partials_head') %> 
+</head>
+<body>
+    <header>
+        <%- include('../partials/partials_navbar') %> 
+    </header>
+    
+    <main>
+        <!-- SideNav -->
+        <div class="row">
+            <%- include('../partials/partials_sidebar') %> 
+            <!-- End SideNav -->
+
+            <!-- Field -->
+            <div class="col-md-9 mb-4 mt-4">
+              <div class="container">
+                <h3><b>PROFIL</b></h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <img src="assets/profile-pic.png" alt="profile-pic" style="width: 200px" class="mt-4">
+                  </div>
+                  <div class="col-md-8">
+                    <form action="">
+                      <div class="mb-3 mt-3">
+                        <label for="name" class="form-label">Nama:</label>
+                        <input type="nama" class="form-control" id="name" placeholder="Masukkan Nama" name="name">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="birthdate" class="form-label">Tanggal Lahir:</label>
+                        <input type="date" class="form-control" id="birthdate" placeholder="Tanggal Lahir" name="birthdate">
+                      </div>
+                      <!-- jenis kelamin -->
+                      <div class="mb-3 mt-3">
+                        <label for="gender" class="form-label">Jenis Kelamin:</label>
+                        <select class="form-select">
+                          <option>Laki-laki</option>
+                          <option>Perempuan</option>
+                        </select>
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="address" class="form-label">Alamat:</label>
+                        <textarea name="text" id="address" rows="2" class="form-control"></textarea>
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                      </div>
+                      <div class="mb-3 mt-3">
+                        <label for="phone" class="form-label">No. Telepon:</label>
+                        <input type="number" class="form-control" id="phone" placeholder="No. Telepon" name="phone">
+                      </div>
+                      <div class="mb-5 mt-5">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          <!-- End Field -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/partials_footer')  %> 
+    <!-- End Footer -->
+
+    <%- include('../partials/partials_bootstrapFoot') %> 
+</body>
+</html>
