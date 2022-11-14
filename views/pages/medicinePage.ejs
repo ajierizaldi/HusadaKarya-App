@@ -37,8 +37,11 @@
                                     <td><%= medicines[i].qty %></td>
                                     <td><%= medicines[i].exp_year %></td>
                                     <td>
-                                        <a href="/medicine/<%= medicines[i]._id %>/edit" class="btn btn-warning">Edit</a>
-                                        <a href="/medicine/<%= medicines[i]._id %>/delete" class="btn btn-danger">Delete</a>
+                                        <a href="/medicine/<%= medicines[i].id %>/edit" class="btn btn-warning">Edit</a>
+                                        <a 
+                                        data-car_id="<%= medicines[i].id %>"
+                                        class="btn-delete btn text-danger d-flex align-items-center justify-content-evenly px-xl-4 px-md-3 py-xl-3 py-md-2"
+                                        >Delete</a>
                                     </td>
                                 </tr>
                             <% } %>
